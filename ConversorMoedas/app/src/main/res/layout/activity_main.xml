@@ -8,10 +8,13 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:text="@string/valor_em_real"
         android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,14 +23,20 @@
         app:layout_constraintVertical_bias="0.032" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/edit_value"
-        android:hint="@string/valor" />
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:hint="@string/valor"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textSize="30sp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
         android:text="@string/valor_em_dollar"
         android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,14 +47,16 @@
         app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/edit_dollar"
-        android:hint="@string/valor_em_dollar" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="35dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="@string/valor_em_euro"
         android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,15 +67,17 @@
         app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/edit_euro"
-        android:hint="@string/valor_em_euro" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="35dp" />
 
     <Button
+        android:id="@+id/button_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button_calculate"
+        android:layout_marginTop="30dp"
         android:text="@string/calcular" />
 
 </LinearLayout>
