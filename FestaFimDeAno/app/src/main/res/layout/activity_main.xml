@@ -41,7 +41,7 @@
         android:id="@+id/button_confirm"
         android:layout_width="357dp"
         android:layout_height="wrap_content"
-        android:text="sim/nao/nao confirmado"
-        android:background="@color/colorPrimary"/>
+        android:background="@color/colorPrimary"
+        android:text="sim/nao/nao confirmado" />
 
 </LinearLayout>
