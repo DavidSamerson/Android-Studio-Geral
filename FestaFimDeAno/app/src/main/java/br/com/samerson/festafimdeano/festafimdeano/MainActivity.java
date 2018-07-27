@@ -1,5 +1,6 @@
 package br.com.samerson.festafimdeano.festafimdeano;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         if (id == R.id.button_confirm) {
             //execulta a lógica
+
+            //criar uma instância da classe Intent passando o contexto da aplicação e a classe que eu quero chamar.
+            Intent intent = new Intent(this, DetailsActivity.class );
+            //starta a classe.
+            startActivity(intent);
+
+
         }
     }
 
