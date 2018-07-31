@@ -59,6 +59,9 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:text="sim/nao/nao confirmado"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:textSize="20dp"
+        />
 
 </RelativeLayout>
