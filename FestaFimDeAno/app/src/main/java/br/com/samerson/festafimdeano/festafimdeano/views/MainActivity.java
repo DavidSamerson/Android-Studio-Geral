@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import br.com.samerson.festafimdeano.festafimdeano.R;
 import br.com.samerson.festafimdeano.festafimdeano.constants.FimDeAnoConstants;
 import br.com.samerson.festafimdeano.festafimdeano.util.SecurityPreferences;
@@ -15,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ViewHolder mViewHolder = new ViewHolder();
     private SecurityPreferences mSecurityPreferences;
+    private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.mSecurityPreferences = new SecurityPreferences(this);
 
+        this.mViewHolder.textToday.setText(SIMPLE_DATE_FORMAT.format(Calendar.getInstance().getTime()));
+
+        String daysleft = String.format("%s %s", String.valueOf(this.getDaysLeftToEndYeah()), getString(R.string.dias) );
+        this.mViewHolder.textDaysLeft.setText(daysleft);
+    }
+
+    //Executa toda vez que entrar na tela..
+    protected void onResume () {
+        super.onResume();
         this.verifyPreferences ();
     }
 
@@ -49,6 +62,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         }
+    }
+
+    private int getDaysLeftToEndYeah() {
+
+        Calendar calendarToday = Calendar.getInstance();
+        int today = calendarToday.get(Calendar.DAY_OF_YEAR);
+
+        Calendar calendarLastDay = Calendar.getInstance();
+        int dayDecember31 = calendarLastDay.getActualMaximum(Calendar.DAY_OF_YEAR);
+
+        return dayDecember31 - today;
     }
 
     private void verifyPreferences (){
