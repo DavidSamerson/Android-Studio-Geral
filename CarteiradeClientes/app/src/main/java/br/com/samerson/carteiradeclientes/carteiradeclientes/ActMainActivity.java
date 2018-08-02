@@ -1,13 +1,18 @@
 package br.com.samerson.carteiradeclientes.carteiradeclientes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 public class ActMainActivity extends AppCompatActivity {
+
+    private RecyclerView lsdDados;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +21,26 @@ public class ActMainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+       fab = (FloatingActionButton) findViewById(R.id.fab);
+       lsdDados = (RecyclerView) findViewById(R.id.lsdDados);
+//        fab.setOnClickListener( new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//
+//            }
+//
+//        });
+    }
+
+    public void cadastrar (View view) {
+
+        //Intent chama outras páginas.
+        Intent it = new Intent(ActMainActivity.this, ActCadCliente.class);
+        startActivity(it);
+
     }
 
 }
