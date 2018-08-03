@@ -23,16 +23,7 @@ public class ActMainActivity extends AppCompatActivity {
 
        fab = (FloatingActionButton) findViewById(R.id.fab);
        lsdDados = (RecyclerView) findViewById(R.id.lsdDados);
-//        fab.setOnClickListener( new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//
-//
-//
-//            }
-//
-//        });
+
     }
 
     public void cadastrar (View view) {

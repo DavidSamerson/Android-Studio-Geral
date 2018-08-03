@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CarteiraDeClientes2</string>
+    <string name="title_activity_act_main">Cadastro de Clientes</string>
+    <string name="title_activity_act_cad_cliente">ActCadCliente</string>
+</resources>
