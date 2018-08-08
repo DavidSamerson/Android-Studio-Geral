@@ -12,4 +12,6 @@
     <string name="titulo_aviso">Aviso!</string>
     <string name="confirmacaoOK">OK!</string>
     <string name="mensagem_aviso">Há campos inválidos ou em branco</string>
+    <string name="avisoDeConexaoCriada">Conexão criada com sucesso!</string>
+    <string name="mensagem_erro">ERRO</string>
 </resources>
