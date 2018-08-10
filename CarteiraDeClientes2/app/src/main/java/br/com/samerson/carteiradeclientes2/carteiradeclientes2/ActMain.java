@@ -10,17 +10,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.LinearLayout;
-
-import java.util.List;
 
 import br.com.samerson.carteiradeclientes2.carteiradeclientes2.Database.DadosOpenHelper;
-import br.com.samerson.carteiradeclientes2.carteiradeclientes2.Dominio.Entidades.Clientes;
-import br.com.samerson.carteiradeclientes2.carteiradeclientes2.Dominio.Repositorio.ClienteRepositorio;
 
 public class ActMain extends AppCompatActivity {
 
@@ -29,9 +22,6 @@ public class ActMain extends AppCompatActivity {
     private FloatingActionButton fab;
     private DadosOpenHelper dadosOpenHelper;
     private ConstraintLayout layoutContentMain;
-    private RecyclerView lsdDados;
-    private ClienteAdapter clienteAdapter;
-    private ClienteRepositorio clienteRepositorio;
 
 
     @Override
@@ -43,21 +33,7 @@ public class ActMain extends AppCompatActivity {
         setSupportActionBar(this.toolbar);
         this.fab = (FloatingActionButton) findViewById(R.id.fab);
         this.layoutContentMain = (ConstraintLayout) findViewById(R.id.layoutContentMain);
-        this.lsdDados = (RecyclerView) findViewById(R.id.lsdDados);
-
-        // LinearLayout - instância
-        LinearLayoutManager linearLayout = new LinearLayoutManager(this);
-
-        // Seta uma linear Layout na pagina
-        lsdDados.setLayoutManager(linearLayout);
-
-        clienteRepositorio = new ClienteRepositorio(conexao);
-
-        List<Clientes> dados = clienteRepositorio.pesquisar();
-
-        clienteAdapter = new ClienteAdapter(dados);
-
-        lsdDados.setAdapter(clienteAdapter);
+        this.criarConexao();
 
     }
 
