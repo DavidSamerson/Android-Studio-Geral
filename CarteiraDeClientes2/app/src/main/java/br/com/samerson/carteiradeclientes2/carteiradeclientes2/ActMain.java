@@ -45,8 +45,10 @@ public class ActMain extends AppCompatActivity {
         this.layoutContentMain = (ConstraintLayout) findViewById(R.id.layoutContentMain);
         this.lsdDados = (RecyclerView) findViewById(R.id.lsdDados);
 
+        criarConexao();
+
         // LinearLayout - instância
-        LinearLayoutManager linearLayout = new LinearLayoutManager(this);
+        LinearLayoutManager linearLayout = new LinearLayoutManager(ActMain.this);
 
         // Seta uma linear Layout na pagina
         lsdDados.setLayoutManager(linearLayout);
