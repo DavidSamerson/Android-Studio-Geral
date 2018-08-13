@@ -4,6 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark"
+    android:padding="@dimen/dimensoesPagina"
     tools:context="samerson.cursoandroid.com.frasedodia.MainActivity">
 
+    <TextView
+        android:id="@+id/textoNovaFraseID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/botaoNovaFraseID"
+        android:layout_marginTop="106dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/textoNovaFrase" />
+
+    <Button
+        android:id="@+id/botaoNovaFraseID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="29dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/textoFraseDia"
+        android:textColor="@android:color/background_light" />
 </RelativeLayout>
