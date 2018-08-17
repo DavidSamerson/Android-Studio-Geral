@@ -3,4 +3,5 @@
     <dimen name="empresaDetalhes">30sp</dimen>
     <dimen name="scrollViewEmpresa_largura">320dp</dimen>
     <dimen name="scrollViewEmpresa_altura">390dp</dimen>
+    <dimen name="servico_titulo">30sp</dimen>
 </resources>
